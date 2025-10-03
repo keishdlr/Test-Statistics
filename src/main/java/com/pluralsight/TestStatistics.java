@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Arrays;
+
 public class TestStatistics {
 
     public static void main(String[] args) {
@@ -30,5 +32,26 @@ public class TestStatistics {
             min = Scores[i];
         }
         System.out.println("The lowest Score is: " + min);
+
+        // BONUS: Calculate and display the median value
+
+        // order the array from least to highest
+        Arrays.sort(Scores);
+        // find the median
+        //have an even number of elements in the array
+        // TO find the median have to add the 2 in the middle and divide by 2
+        double median;
+        int middleIndex = Scores.length/2;
+        if (Scores.length % 2 == 0) {
+            // If even, average the two middle numbers
+            median = (Scores[middleIndex - 1] + Scores[middleIndex]) / 2;
+        } else {
+            // If odd, take the middle number
+            median = Scores[middleIndex];
+
+            System.out.println("The median value is: " + middleIndex);
+            //difference between average and median = median value
+            double difference = avgScore - middleIndex;
+            System.out.println("The difference between the average and the median is: " + difference);
     }
-}
+}}
