@@ -45,13 +45,15 @@ public class TestStatistics {
         if (Scores.length % 2 == 0) {
             // If even, average the two middle numbers
             median = (Scores[middleIndex - 1] + Scores[middleIndex]) / 2;
-        } else {
+        }
+        else {
             // If odd, take the middle number
             median = Scores[middleIndex];
-
-            System.out.println("The median value is: " + middleIndex);
+        }
+            System.out.println("The median value is: " + median);
             //difference between average and median = median value
             double difference = avgScore - middleIndex;
             System.out.println("The difference between the average and the median is: " + difference);
+
     }
-}}
+}
